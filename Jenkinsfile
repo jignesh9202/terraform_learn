@@ -21,7 +21,7 @@ pipeline {
         stage('checkout') {
             steps {
                  script{
-                        dir("terraform")
+                        //dir("terraform")
                         {
                             git "https://github.com/jignesh9202/terraform_learn.git"
                         }
