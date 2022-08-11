@@ -22,9 +22,9 @@ pipeline {
             steps {
                  script{
                         //dir("terraform")
-                        {
+                        //{
                             git "https://github.com/jignesh9202/terraform_learn.git"
-                        }
+                        //}
                     }
                 }
             }
