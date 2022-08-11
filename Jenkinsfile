@@ -20,11 +20,9 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                 script{
-                        //dir("mydir")
-                        //{
-                            git "https://github.com/jignesh9202/terraform_learn.git"
-                        //}
+                 
+                    git branch: "main" , credentialsId: 'd0aba152-18d4-48b4-a074-5a84fe621254', url: "https://github.com/jignesh9202/terraform_learn.git"
+
                     }
                 }
             }
