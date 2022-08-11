@@ -21,7 +21,7 @@ pipeline {
         stage('checkout') {
             steps {
                  script{
-                        //dir("terraform")
+                        //dir("mydir")
                         //{
                             git "https://github.com/jignesh9202/terraform_learn.git"
                         //}
@@ -31,11 +31,11 @@ pipeline {
 
         stage('Plan') {
             steps {
-                sh "cd terraform; terraform init -input=false"
-                sh "cd terraform; terraform workspace new ${environment}"
-                sh "cd terraform; terraform workspace select ${environment}"
-                sh "cd terraform; terraform plan -input=false -out tfplan "
-                sh "cd terraform; terraform show -no-color tfplan > tfplan.txt"
+                sh "pwd; terraform init -input=false"
+                sh "pwd; terraform workspace new ${environment}"
+                sh "pwd; terraform workspace select ${environment}"
+                sh "pwd; terraform plan -input=false -out tfplan "
+                sh "pwd; terraform show -no-color tfplan > tfplan.txt"
             }
         }
         stage('Approval') {
