@@ -82,6 +82,7 @@ pipeline {
             }
         
         steps {
+           sh 'terraform workspace select ${environment}'
            sh "terraform destroy --auto-approve"
         }
     }
