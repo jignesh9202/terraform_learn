@@ -3,6 +3,6 @@
   instance_type = "t2.micro"
 
   tags = {
-    Name = "demo_instance"
+    Name = "demo_instance1"
   }
 }
