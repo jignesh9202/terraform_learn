@@ -5,13 +5,13 @@ terraform {
         version = "~>3.14.0"
         }
   }
-  cloud {
-    organization = "learning_jig"
-
-    workspaces {
-      name = "CICD_Pipe"
-    }
-  }
+  #cloud {
+  #  organization = "learning_jig"
+#
+  #  workspaces {
+  #    name = "CICD_Pipe"
+  #  }
+  #}
 }
 
 provider "aws" {
